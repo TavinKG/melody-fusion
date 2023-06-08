@@ -1,0 +1,143 @@
+footer {
+    display: flex;
+    color: white;
+    background-color: black;
+}
+.modo-escuro footer{
+    background-color: #1b0f22;
+}
+footer h3 {
+    text-transform: uppercase;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 40%;
+    padding: 20px;
+}
+.description p{
+    padding: 20px 20px;
+    line-height: 28px;
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: justify;
+}
+.redes-sociais{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding: 20px;
+}
+footer .redes-sociais ul{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    width: 154px;
+    height: 100%;
+    justify-content: space-around;
+}
+footer li{
+    display: flex;
+    margin: 5px;
+    font-weight: lighter;
+    align-items: center;
+}
+footer img{
+    width: 30px;
+    margin-right: 20px;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    padding: 20px;
+}
+.contact ul{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+.footer{
+    display: none;
+}
+@media screen and (max-width: 767px){
+    footer{
+        height: 13vh;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+    }
+    footer ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    main{
+        position: relative;
+    }
+    footer li{
+        width: 28px;
+        height: 28px;
+    }
+    .imagem-botao-mobile:hover{
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    .footer{
+        display: flex;
+    }
+    .description{
+        display: none;
+    }
+    .redes-sociais{
+        display: none;
+    }
+    .contact{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    footer{
+        height: 13vh;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    footer ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    main{
+        position: relative;
+    }
+    footer li{
+        width: 28px;
+        height: 28px;
+    }
+    .imagem-botao-mobile:hover{
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    .footer{
+        display: flex;
+    }
+    .description{
+        display: none;
+    }
+    .redes-sociais{
+        display: none;
+    }
+    .contact{
+        display: none;
+    }
+}

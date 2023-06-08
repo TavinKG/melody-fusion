@@ -1,0 +1,116 @@
+header{
+    background-color: white;
+    height: 15vh;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    top: 0;
+    left: 0;
+    position: sticky;
+    z-index: 10;
+}
+.modo-escuro header{
+    background-color: black;
+}
+.modo-escuro header{
+    transition: 0.2s ease-in-out;
+    border-bottom: 2px solid white;
+}
+header .container-logo{
+    width: 350px;
+    padding-left: 10vw;
+    justify-content: center;
+}
+header .logo-header{
+    width: 100%;
+}
+header ul{
+    display: flex;
+    padding: 20px;
+    gap: 5vw;
+    align-items: center;
+}
+header li{
+    text-transform: uppercase;
+    font-size: 18px;
+}
+header a, 
+header a:visited{
+    text-decoration: none;
+    color: #1b0f22;
+    transition: 0.2s ease-in-out;
+}
+.modo-escuro header a,
+.modo-escuro header a:visited{
+    transition: 0.2s ease-in-out;
+    color: white;
+}
+header a:hover{
+    color: #b30fc9;
+}
+.modo-escuro header a:hover{
+    transition: 0.2s ease-in-out;
+    color: #800080;
+}
+.active{
+    border-bottom: 2px solid #1b0f22;
+}
+.modo-escuro .active{
+    border-radius: 2px solid white;
+}
+.modo-escuro .active{
+    border-bottom: 2px solid white;
+}
+header #botao-alterar-tema{
+    align-items: center;
+    border: none;
+    width: 40px;
+}
+header .imagem-botao{
+    width: 100%;
+    transition: 0.2s ease-in-out;
+}
+header .imagem-botao:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px){
+    header{
+        justify-content: center;
+    }
+    header .container-logo{
+    display: flex;
+    width: 100%px;
+    height: 10vh;
+    padding: 0px;
+    justify-content: center;
+}
+header .logo-header{
+    width:80%;
+}
+    header ul{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    header{
+        justify-content: center;
+    }
+    header .container-logo{
+    display: flex;
+    width: 100%px;
+    height: 10vh;
+    padding: 0px;
+    justify-content: center;
+}
+header .logo-header{
+    width:80%;
+}
+    header ul{
+        display: none;
+    }
+}

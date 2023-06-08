@@ -1,0 +1,52 @@
+main{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 3vh 10px 10px 10px;
+}
+h1{
+    margin: 20px;
+    font-weight: bold;
+}
+main .container{
+    display: flex;
+    flex-direction: column;
+}
+main li{
+    height: 300px;
+    display: flex;
+    margin: 20px;
+    background-color: transparent;
+    border: 2px solid #800080;
+    border-radius: 10px;
+}
+.foto-artista{
+    display: flex;
+    width: 30%;
+    height: 100%;
+    /* padding: 35px; */
+    align-items: center;
+    justify-content: center;
+}
+.foto-artista img{
+    width: 215px;
+    height: 215px;
+    border-radius: 75%;
+}
+.descricao-artista{
+    width: 70%;
+    height: 100%;
+    padding: 35px;
+}
+.descricao-artista h2{
+    text-transform: uppercase;
+}
+.descricao-artista p{
+    height: 180px;
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 20px;
+    text-align: justify;
+    padding-right: 10px;
+    overflow-y: auto;
+}
