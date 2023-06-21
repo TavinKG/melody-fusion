@@ -85,8 +85,11 @@ footer img{
         width: 28px;
         height: 28px;
     }
+    footer li img{
+        width: 70%;
+    }
     .imagem-botao-mobile:hover{
-        transform: scale(1.05);
+        transform: scale(1.2);
         cursor: pointer;
     }
     .footer{
@@ -107,9 +110,10 @@ footer img{
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     footer{
         height: 13vh;
-        position: absolute;
+        position: sticky;
+        bottom: 0;
         left: 0;
-        right: 0;
+        z-index: 10;
     }
     footer ul{
         width: 100%;
