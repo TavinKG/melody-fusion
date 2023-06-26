@@ -88,6 +88,14 @@ footer img{
     footer li img{
         width: 70%;
     }
+    #botao-alterar-tema-mobile{
+        width: 28px;
+        height: 23.6px;
+    }
+    .imagem-botao-mobile{
+        width: 28px;
+        height: 28px;
+    }
     .imagem-botao-mobile:hover{
         transform: scale(1.2);
         cursor: pointer;

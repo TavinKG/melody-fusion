@@ -57,7 +57,7 @@ li .item{
 }
 .compra{
     display: flex;
-    width: 20vw;
+    width: 22vw;
     justify-content: space-between;
 }
 .container-quant{
@@ -82,4 +82,46 @@ li .item{
 }
 .total{
     margin-right: 42px;
+}
+
+@media screen and (max-width: 767px){
+    .pista{
+        width: 80vw;
+    }
+    .pista ul{
+        width: 70vw;
+    }
+    .pista li{
+        height: 1vh;
+    }
+    .pista h1{
+        font-size: 24px;
+    }
+    .item h2{
+        font-size: 14px;
+    }
+    .item img{
+        width: 20px;
+    }
+    .compra{
+        width: 39vw;
+    }
+    .quant{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .pista h1{
+        font-size: 28px;
+    }
+    .item h2{
+        font-size: 18px;
+    }
+    .item img{
+        width: 22px;
+    }
+    .compra{
+        width: 24vw;
+    }
 }

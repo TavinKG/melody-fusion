@@ -15,17 +15,17 @@
 </head>
 <body>
     <header>
-            <div class="container-logo">
-                <img src="imagens/logo2-white-rbg.png" alt="Logo Melody Fusion" class="logo-header">
-            </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="line.html">Line Up</a></li>
-                <li><a href="artistas.html">Artistas</a></li>
-                <li><a href="playlist.html">Playlist</a></li>
-                <li><a href="ingressos.html">Ingressos</a></li>
-                <li id="botao-alterar-tema"><img src="imagens/ensolarado.png" alt="Sol" class="imagem-botao"></li>
-            </ul>
+        <div class="container-logo">
+            <img src="imagens/logo2-white-rbg.png" alt="Logo Melody Fusion" class="logo-header">
+        </div>
+        <ul>
+            <li class="a-index"><a href="index.html">Home</a></li>
+            <li class="a-line"><a href="line.html">Line Up</a></li>
+            <li class="a-artistas"><a href="artistas.html">Artistas</a></li>
+            <li class="a-playlist"><a href="playlist.html">Playlist</a></li>
+            <li class="a-ingressos"><a href="ingressos.html">Ingressos</a></li>
+            <li id="botao-alterar-tema"><img src="imagens/ensolarado.png" alt="Sol" class="imagem-botao"></li>
+        </ul>
     </header>
     <main>
         <div class="container-ingressos">
@@ -38,10 +38,9 @@
                             <div class="compra">
                                 <h2>R$200,00</h2>
                                 <div class="container-quant">
-                                    <img src="imagens/menos.png" alt="botao menos" class="botao-menos">
-                                    <!-- <h2 class="quant">0</h2> -->
-                                    <input type="text" value="1" class="quant" disabled>
-                                    <img src="imagens/mais.png" alt="botao mais" class="botao-mais">
+                                    <img src="imagens/menos.png" alt="botao menos" class="botao-menos" id="-button1">
+                                    <input type="text" value="0" class="quant" id="input1" disabled>
+                                    <img src="imagens/mais.png" alt="botao mais" class="botao-mais" id="+button1">
                                 </div>
                             </div>
                         </div>
@@ -52,10 +51,9 @@
                             <div class="compra">
                                 <h2>R$100,00</h2>
                                 <div class="container-quant">
-                                    <img src="imagens/menos.png" alt="botao menos" class="botao-menos">
-                                    <!-- <h2 class="quant">0</h2> -->
-                                    <input type="text" value="1" class="quant" disabled>
-                                    <img src="imagens/mais.png" alt="botao mais" class="botao-mais">
+                                    <img src="imagens/menos.png" alt="botao menos" class="botao-menos" id="-button2">
+                                    <input type="text" value="0" class="quant" id="input2" disabled>
+                                    <img src="imagens/mais.png" alt="botao mais" class="botao-mais" id="+button2">
                                 </div>
                             </div>
                         </div>
@@ -72,10 +70,9 @@
                             <div class="compra">
                                 <h2>R$100,00</h2>
                                 <div class="container-quant">
-                                    <img src="imagens/menos.png" alt="botao menos" class="botao-menos">
-                                    <!-- <h2 class="quant">0</h2> -->
-                                    <input type="text" value="1" class="quant" disabled>
-                                    <img src="imagens/mais.png" alt="botao mais" class="botao-mais">
+                                    <img src="imagens/menos.png" alt="botao menos" class="botao-menos" id="-button3">
+                                    <input type="text" value="0" class="quant" id="input3" disabled>
+                                    <img src="imagens/mais.png" alt="botao mais" class="botao-mais" id="+button3">
                                 </div>
                             </div>
                         </div>
@@ -86,10 +83,9 @@
                             <div class="compra">
                                 <h2>R$50,00</h2>
                                 <div class="container-quant">
-                                    <img src="imagens/menos.png" alt="botao menos" class="botao-menos">
-                                    <!-- <h2 class="quant">0</h2> -->
-                                    <input type="text" value="1" class="quant" disabled>
-                                    <img src="imagens/mais.png" alt="botao mais" class="botao-mais">
+                                    <img src="imagens/menos.png" alt="botao menos" class="botao-menos" id="-button4">
+                                    <input type="text" value="0" class="quant" id="input4" disabled>
+                                    <img src="imagens/mais.png" alt="botao mais" class="botao-mais" id="+button4">
                                 </div>
                             </div>
                         </div>
@@ -105,7 +101,7 @@
                             <div class="compra">
                                 <h2>R$450,00</h2>
                                 <div class="container-quant">
-                                    <input type="text" value="4" class="quant total" disabled>
+                                    <input type="text" value="0" class="quant total" disabled>
                                 </div>
                             </div>
                         </div>
@@ -146,5 +142,7 @@
         </ul>
     </footer>
     <script src="script/index.js"></script>
+    <script src="script/ingressos.js"></script>
+    <script src="script/header.js"></script>
 </body>
 </html>
