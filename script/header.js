@@ -5,6 +5,8 @@ const aArtistas = document.querySelector(".a-artistas")
 const aPlaylist = document.querySelector(".a-playlist")
 const aIngressos = document.querySelector(".a-ingressos")
 
+console.log(url)
+
 if(url == "index.html"){
     aIndex.classList.add("active")
 } 
