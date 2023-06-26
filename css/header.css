@@ -48,6 +48,7 @@ header a:visited{
     color: white;
 }
 header a:hover{
+    transition: 0.2s ease-in-out;
     color: #b30fc9;
 }
 .modo-escuro header a:hover{
@@ -56,9 +57,6 @@ header a:hover{
 }
 .active{
     border-bottom: 2px solid #1b0f22;
-}
-.modo-escuro .active{
-    border-radius: 2px solid white;
 }
 .modo-escuro .active{
     border-bottom: 2px solid white;

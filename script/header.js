@@ -5,9 +5,7 @@ const aArtistas = document.querySelector(".a-artistas")
 const aPlaylist = document.querySelector(".a-playlist")
 const aIngressos = document.querySelector(".a-ingressos")
 
-console.log(url)
-
-if(url == "index.html"){
+if(url == "index.html" || url == ""){
     aIndex.classList.add("active")
 } 
 else if(url == "line.html"){
