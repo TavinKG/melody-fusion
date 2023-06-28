@@ -144,8 +144,8 @@ header .logo-header{
     align-items: center;
 }
 header .logo-header{
-    width: 35%;
-    height: 80%;
+    width: 35vw;
+    height: 10vh;
 }
     header ul{
         display: none;
