@@ -214,7 +214,7 @@ dialog{
     background: transparent;
     border: 2px solid #800080;
     border-radius: 10px;
-    font-size: 125%;
+    font-size: 120%;
     text-transform: uppercase;
     width: 140px;
 }
@@ -330,5 +330,29 @@ dialog{
     }
     .total{
         margin-right: 28px;
+    }
+    .modal-form h1{
+        font-size: 25px;
+    }
+    #quant-modal{
+        font-size: 16px;
+    }
+    #valor-total-modal{
+        font-size: 16px;
+    }
+    .modal-form input{
+        font-size: 10px;
+    }
+    .modal-form input::placeholder{
+        font-size: 10px;
+    }
+    #btn-cancelar{
+        width: 110px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .modal-form button{
+        font-size: 15px;
+        font-weight: 500;
     }
 }
