@@ -36,7 +36,7 @@
                         <div class="item">
                             <h2 class="tipo-ingresso">Inteira</h2>
                             <div class="compra">
-                                <h2>R$200,00</h2>
+                                <h2>R$800,00</h2>
                                 <div class="container-quant">
                                     <img src="imagens/menos.png" alt="botao menos" class="botao-menos" id="-button1">
                                     <input type="text" value="0" class="quant" id="input1" disabled>
@@ -49,7 +49,7 @@
                         <div class="item">
                             <h2 class="tipo-ingresso">Meia</h2>
                             <div class="compra">
-                                <h2>R$100,00</h2>
+                                <h2>R$400,00</h2>
                                 <div class="container-quant">
                                     <img src="imagens/menos.png" alt="botao menos" class="botao-menos" id="-button2">
                                     <input type="text" value="0" class="quant" id="input2" disabled>
@@ -68,7 +68,7 @@
                         <div class="item">
                             <h2 class="tipo-ingresso">Inteira</h2>
                             <div class="compra">
-                                <h2>R$100,00</h2>
+                                <h2>R$600,00</h2>
                                 <div class="container-quant">
                                     <img src="imagens/menos.png" alt="botao menos" class="botao-menos" id="-button3">
                                     <input type="text" value="0" class="quant" id="input3" disabled>
@@ -81,7 +81,7 @@
                         <div class="item">
                             <h2 class="tipo-ingresso">Meia</h2>
                             <div class="compra">
-                                <h2>R$50,00</h2>
+                                <h2>R$300,00</h2>
                                 <div class="container-quant">
                                     <img src="imagens/menos.png" alt="botao menos" class="botao-menos" id="-button4">
                                     <input type="text" value="0" class="quant" id="input4" disabled>
@@ -99,7 +99,7 @@
                         <div class="item">
                             <h2 class="tipo-ingresso">Total</h2>
                             <div class="compra">
-                                <h2>R$450,00</h2>
+                                <input type="text" value="R$0,00" class="valor-total" disabled>
                                 <div class="container-quant">
                                     <input type="text" value="0" class="quant total" disabled>
                                 </div>
@@ -107,7 +107,36 @@
                         </div>
                     </li>
                 </ul>
+                <button>Realizar Pedido</button>
             </div>
+        </div>
+        <dialog>
+            <div class="modal-form">
+                <form autocomplete="off">
+                    <ul>
+                        <li><h1>Realizar Compra</h1></li>
+                        <li><input type="text" placeholder="Nome" maxlength="40" required id="name"></li>
+                        <li><input type="text" placeholder="Email" maxlength="40" required id="email"></li>
+                        <li><input type="text" placeholder="DDD (00)" maxlength="2" required id="ddd" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')"><input type="text" placeholder="Celular (Apenas Números)" maxlength="10" required id="tel" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')"></li>
+                        <li><input type="text" placeholder="Endereço" maxlength="100" required id="endereco"></li>
+                        <li><input type="text" placeholder="CPF (Apenas Números)" maxlength="14" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')" required id="cpf"></li>
+                        <li class="compra-modal"><input type="text" value="R$3333,00" id="valor-total-modal" disabled><input type="text" value="8x Ingresso(s)" id="quant-modal" disabled></li>
+                        <li class="botao-compra"><input type="reset" value="Cancelar" id="btn-cancelar"><button id="btn-comprar">Comprar</button></li>
+                    </ul>
+                </form>
+            </div>
+        </dialog>
+        <div class="pedido">
+            <ul>
+                <li>
+                    <h1>Realizar Compra</h1></li>
+                    <li><input type="text" placeholder="Nome" maxlength="40" required></li>
+                    <li><input type="text" placeholder="Email" maxlength="40" required></li>
+                    <li><input type="text" placeholder="DDD (00)" maxlength="2" required id="ddd" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')"><input type="text" placeholder="Celular (Apenas Números)" maxlength="11" required id="tel" oninput="this.value = this.value.replace(/[^0-9.- ]/g,)"></li>
+                    <li><input type="text" placeholder="Endereço" maxlength="100" required></li>
+                    <li><input type="text" placeholder="CPF (Apenas Números)" maxlength="14" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')" required id="cpf"></li>
+                    <li class="compra-modal"><input type="text" value="R$3333,00" id="valor-total-modal" disabled><input type="text" value="8x Ingresso(s)" id="quant-modal" disabled></li>
+            </ul>
         </div>
     </main>
     <footer>

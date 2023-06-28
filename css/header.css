@@ -5,18 +5,20 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #b30fc9;
     top: 0;
     left: 0;
     position: sticky;
     z-index: 10;
+    border-image: conic-gradient(from var(--angle), var(--c3), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c3) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
 }
 .modo-escuro header{
     background-color: black;
 }
 .modo-escuro header{
     transition: 0.2s ease-in-out;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #b30fc9;
 }
 header .container-logo{
     width: 350px;
@@ -53,13 +55,13 @@ header a:hover{
 }
 .modo-escuro header a:hover{
     transition: 0.2s ease-in-out;
-    color: #800080;
+    color: #b30fc9;
 }
 .active{
-    border-bottom: 2px solid #1b0f22;
+    border-bottom: 2px solid #b30fc9;
 }
 .modo-escuro .active{
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #b30fc9;
 }
 header #botao-alterar-tema{
     align-items: center;
@@ -74,6 +76,39 @@ header .imagem-botao:hover{
     transform: scale(1.05);
     cursor: pointer;
 }
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+
+:root {
+	--d: 2000ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: #800080;
+	--c2: transparent;
+    --c3: #b30fc9;
+}
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
 
 @media screen and (max-width: 767px){
     header{

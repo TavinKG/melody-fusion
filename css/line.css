@@ -1,0 +1,126 @@
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+.container-line{
+    display: flex;
+    width: 80vw;
+    height: 65vh;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;
+    border: 2px solid #800080;
+    border-radius: 10px;
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+.container-line ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.horario{
+    width: 126px;
+}
+.shine{
+    width: 200px;
+}
+.glow{
+    width: 200px;
+}
+.container-line h1{
+    color: #1b0f22;
+    padding-bottom: 10px;
+}
+.modo-escuro .container-line h1{
+    color: white;
+}
+.container-line li{
+    color: #b30fc9;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: #800080;
+	--c2: transparent;
+    --c3: #b30fc9;
+}
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+@media screen and (max-width: 767px){
+    main{
+        height: 72vh;
+        padding-top: 0;
+        align-items: center;
+        padding-bottom: 0;
+    }
+    .container-line{
+        width: 90vw;
+        height: 40vh;
+        gap: 4vw;
+    }
+    .horario{
+        width: 59px;
+    }
+    .shine{
+        width: 94px;
+    }
+    .glow{
+        width: 90px;
+    }
+    .container-line h1{
+        font-size: 15px;
+    }
+    .container-line li{
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    main{
+        height: 72vh;
+    }
+    .container-line{
+        height: 50vh;
+        gap: 4vw;
+    }
+    .horario{
+        width: 110px;
+    }
+    .shine{
+        width: 175px;
+    }
+    .glow{
+        width: 166px;
+    }
+    .container-line h1{
+        font-size: 28px;
+    }
+}

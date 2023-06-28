@@ -16,7 +16,9 @@ main {
     margin: 10px;
     width: 60vw;
     padding: 30px 50px;
-    border-radius: 5px;
+    /* border-radius: 10px; */
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c3) 0.1turn, var(--c3) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
 }
 .pista h1{
     margin-bottom: 15px;
@@ -73,15 +75,201 @@ li .item{
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
     color: #1b0f22;
-    width: 12px;
+    width: 13px;
     justify-content: center;
     align-items: center;
 }
 .modo-escuro .quant{
     color: white;
 }
+.valor-total{
+    display: flex;
+    background: transparent;
+    border: none;
+    font-size: 125%;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #1b0f22;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+}
+.modo-escuro .valor-total{
+    color: white;
+}
 .total{
-    margin-right: 42px;
+    margin-right: 40px;
+}
+button{
+    padding: 10px;
+    margin-top: 20px;
+    background: transparent;
+    border: 2px solid #800080;
+    border-radius: 10px;
+    font-size: 125%;
+    text-transform: uppercase;
+}
+.modo-escuro button{
+    color: white;
+}
+button:hover{
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    background-color: #b30fc9;
+    border: 2px solid #1b0f22;
+}
+.modo-escuro button:hover{
+    background-color: #800080;
+    border: 2px solid white;
+}
+dialog::backdrop{
+    background-color: rgb(0 0 0 / .95);
+}
+dialog{
+    border: 3px solid #800080;
+    /* border-radius: 10px; */
+    width: 40vw;
+    height: 65vh;
+    margin: 20vh 30vw;
+    padding: 30px;
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c3) 0.1turn, var(--c3) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+.modo-escuro dialog{
+    background-color: black;
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+.modal-form{
+    display: flex;
+    justify-content: center;
+}
+.modal-form ul{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+.modal-form h1{
+    text-align: center;
+}
+.modo-escuro .modal-form h1{
+    color: white;
+}
+.modal-form li{
+    width: 30vw;
+}
+.modal-form input{
+    width: 30vw;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #800080;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+.modo-escuro .modal-form input{
+    color: white;
+}
+.modal-form input::placeholder{
+    font-size: 14px;
+}
+.modal-form input:focus, select:focus{
+    background: transparent;
+    outline: 0;
+}
+#ddd{
+    width: 8vw;
+}
+#tel{
+    margin-left: 4vw;
+    width: 18vw;
+}
+.compra-modal{
+    display: flex;
+    justify-content: space-between;
+}
+#valor-total-modal{
+    width: 106px;
+    border: none;
+    font-size: 120%;
+    color: #1b0f22;
+}
+.modo-escuro #valor-total-modal{
+    color: white;
+}
+#quant-modal{
+    width: 122px;
+    border: none;
+    font-size: 120%;
+    color: #1b0f22;
+    text-align: right;
+}
+.modo-escuro #quant-modal{
+    color: white;
+}
+.modal-form button{
+    margin-top: 0;
+}
+#btn-cancelar{
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #800080;
+    border-radius: 10px;
+    font-size: 125%;
+    text-transform: uppercase;
+    width: 140px;
+}
+.modo-escuro #btn-cancelar{
+    color: white;
+}
+#btn-cancelar:hover{
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    background-color: #b30fc9;
+    border: 2px solid #1b0f22;
+}
+.modo-escuro #btn-cancelar:hover{
+    background-color: #800080;
+    border: 2px solid white;
+}
+.botao-compra{
+    display: flex;
+    justify-content: space-around;
+}
+.pedido{
+    display: none;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: #800080;
+	--c2: transparent;
+    --c3: #b30fc9;
+}
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
 }
 
 @media screen and (max-width: 767px){
@@ -109,6 +297,16 @@ li .item{
     .quant{
         font-size: 14px;
     }
+    .valor-total{
+        font-size: 14px;
+        width: 100px;
+    }
+    .total{
+        margin-right: 25px;
+    }
+    .pista button{
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
@@ -123,5 +321,14 @@ li .item{
     }
     .compra{
         width: 24vw;
+    }
+    .valor-total{
+        font-size: 18px;
+    }
+    .quant{
+        font-size: 18px;
+    }
+    .total{
+        margin-right: 28px;
     }
 }

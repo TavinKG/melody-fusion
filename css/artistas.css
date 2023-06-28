@@ -17,8 +17,10 @@ main li{
     display: flex;
     margin: 20px;
     background-color: transparent;
-    border: 2px solid #800080;
+    border: 2px solid;
     border-radius: 10px;
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
 }
 .foto-artista{
     display: flex;
@@ -49,6 +51,37 @@ main li{
     text-align: justify;
     padding-right: 10px;
     overflow-y: auto;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+:root {
+	--d: 2000ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: #800080;
+	--c2: transparent;
+}
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
 }
 
 @media screen and (max-width: 767px){

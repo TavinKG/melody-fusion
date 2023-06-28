@@ -5,14 +5,67 @@ const Input2 = document.querySelector("#input2")
 const Input3 = document.querySelector("#input3")
 const Input4 = document.querySelector("#input4")
 const InputTotal = document.querySelector(".total")
+const ValorTotal = document.querySelector(".valor-total")
+const RealizarPedido = document.querySelector(".pista button")
+const Modal = document.querySelector("dialog")
+const cpf = document.querySelector("#cpf")
+const tel = document.querySelector("#tel")
+const valorTotalModal = document.querySelector('#valor-total-modal')
+const quantModal = document.querySelector('#quant-modal')
+const btnComprar = document.querySelector("#btn-comprar")
+const btnCancelar = document.querySelector("#btn-cancelar")
+const containerIngressos = document.querySelector(".container-ingressos")
+const pedido = document.querySelector(".pedido")
+var nome = document.querySelector("#name")
+var email = document.querySelector("#email")
+var endereco = document.querySelector("#endereco")
+var ddd = document.querySelector("#ddd")
 
 let quant;
-let total;
+let total = 0;
+let valor;
+
+RealizarPedido.addEventListener('click', FunModal)
+
+cpf.addEventListener('keypress', () => {
+    let cpflength = cpf.value.length
+
+    if(cpflength === 3 || cpflength === 7) {
+        cpf.value += '.'
+    }
+    else if (cpflength === 11) {
+        cpf.value += '-'
+    }
+})
+
+tel.addEventListener('keypress', () => {
+    let tellength = tel.value.length
+
+    if(tellength === 5) {
+        tel.value += '-'
+    }
+})
 
 for(var i = 0; i < ArrayBotaoMenos.length; i++){
     ArrayBotaoMenos[i].addEventListener('click', function() {FunDiminui(this.id)})
     ArrayBotaoMais[i].addEventListener('click', function() {FunAumenta(this.id)})
 }
+
+btnCancelar.addEventListener('click', () => {
+    Modal.close()
+    tel.setAttribute('value', '')
+})
+
+btnComprar.addEventListener('click', () => {
+    if(nome.value === '' || email.value === '' || ddd.value === '' || tel.value === '' || endereco.value === '' || cpf.value === '') {
+        alert("Preencha todos os campos")
+    }
+    else {
+        Modal.close()
+        containerIngressos.style.display = "none"
+        pedido.style.display = "flex"
+    }
+})
 
 
 
@@ -30,6 +83,8 @@ function FunDiminui(par_id) {
         quant = Input4.value--
         Input4.setAttribute('value', quant)
     }
+    valor = (800 * parseInt(Input1.value)) +  (400 * parseInt(Input2.value)) + (600 * parseInt(Input3.value)) + (300 * parseInt(Input4.value))
+    ValorTotal.setAttribute('value','R$' + valor + ',00')
     total = parseInt(Input1.value) + parseInt(Input2.value) + parseInt(Input3.value) + parseInt(Input4.value)
     InputTotal.setAttribute('value', total)
 }
@@ -48,6 +103,24 @@ function FunAumenta(par_id) {
         quant = Input4.value++
         Input4.setAttribute('value', quant)
     }
+    valor = (800 * parseInt(Input1.value)) +  (400 * parseInt(Input2.value)) + (600 * parseInt(Input3.value)) + (300 * parseInt(Input4.value))
+    ValorTotal.setAttribute('value','R$' + valor + ',00')
     total = parseInt(Input1.value) + parseInt(Input2.value) + parseInt(Input3.value) + parseInt(Input4.value)
     InputTotal.setAttribute('value', total)
+}
+
+function FunModal() {
+    if(total === 0){
+        alert("É necessário comprar pelo menos um ingresso para continuar")
+    }
+    else{
+        Modal.showModal()
+    valorTotalModal.setAttribute('value', ValorTotal.value)
+    if(total === 1) {
+        quantModal.setAttribute('value', InputTotal.value + "x Ingresso")
+    }
+    else{
+        quantModal.setAttribute('value', InputTotal.value + "x Ingressos")
+    }
+    }
 }
