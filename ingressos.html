@@ -112,7 +112,7 @@
         </div>
         <dialog>
             <div class="modal-form">
-                <form autocomplete="off">
+                <!-- <form autocomplete="off"> -->
                     <ul>
                         <li><h1>Realizar Compra</h1></li>
                         <li><input type="text" placeholder="Nome" maxlength="40" required id="name"></li>
@@ -123,19 +123,18 @@
                         <li class="compra-modal"><input type="text" value="R$3333,00" id="valor-total-modal" disabled><input type="text" value="8x Ingresso(s)" id="quant-modal" disabled></li>
                         <li class="botao-compra"><input type="reset" value="Cancelar" id="btn-cancelar"><button id="btn-comprar">Comprar</button></li>
                     </ul>
-                </form>
+                <!-- </form> -->
             </div>
         </dialog>
         <div class="pedido">
             <ul>
-                <li>
-                    <h1>Realizar Compra</h1></li>
-                    <li><input type="text" placeholder="Nome" maxlength="40" required></li>
-                    <li><input type="text" placeholder="Email" maxlength="40" required></li>
-                    <li><input type="text" placeholder="DDD (00)" maxlength="2" required id="ddd" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')"><input type="text" placeholder="Celular (Apenas Números)" maxlength="11" required id="tel" oninput="this.value = this.value.replace(/[^0-9.- ]/g,)"></li>
-                    <li><input type="text" placeholder="Endereço" maxlength="100" required></li>
-                    <li><input type="text" placeholder="CPF (Apenas Números)" maxlength="14" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')" required id="cpf"></li>
-                    <li class="compra-modal"><input type="text" value="R$3333,00" id="valor-total-modal" disabled><input type="text" value="8x Ingresso(s)" id="quant-modal" disabled></li>
+                <li><h1>Meu pedido</h1></li>
+                <li><input type="text" disabled id="nome-pedido"></li>
+                <li><input type="text" disabled id="email-pedido"></li>
+                <li><input type="text" disabled id="ddd-pedido"><input type="text" disabled id="tel-pedido"></li>
+                <li><input type="text" disabled id="endereco-pedido"></li>
+                <li><input type="text" disabled id="cpf-pedido"></li>
+                <li class="compra-modal"><input type="text" value="R$3333,00" id="valor-total-pedido" disabled><input type="text" value="8x Ingresso(s)" id="quant-pedido" disabled></li>
             </ul>
         </div>
     </main>

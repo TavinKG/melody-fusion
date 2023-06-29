@@ -64,6 +64,14 @@ btnComprar.addEventListener('click', () => {
         Modal.close()
         containerIngressos.style.display = "none"
         pedido.style.display = "flex"
+        document.querySelector("#nome-pedido").setAttribute('value', nome.value)
+        document.querySelector("#email-pedido").setAttribute('value', email.value)
+        document.querySelector("#ddd-pedido").setAttribute('value', ddd.value)
+        document.querySelector("#tel-pedido").setAttribute('value', tel.value)
+        document.querySelector("#endereco-pedido").setAttribute('value', endereco.value)
+        document.querySelector("#cpf-pedido").setAttribute('value', cpf.value)
+        document.querySelector("#valor-total-pedido").setAttribute('value', valorTotalModal.value)
+        document.querySelector("#quant-pedido").setAttribute('value', quantModal.value)
     }
 })
 

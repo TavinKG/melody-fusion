@@ -1,6 +1,7 @@
 main {
     display: flex;
     justify-content: center;
+    min-height: 80vh;
 }
 .container-ingressos{
     display: flex;
@@ -237,6 +238,38 @@ dialog{
 }
 .pedido{
     display: none;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 50vh;
+    margin-top: 15vh;
+    padding: 30px 50px;
+    border: 2px solid;
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c3) 0.1turn, var(--c3) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+.pedido ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3vh ;
+    width: 50vw;
+}
+.pedido h1{
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.pedido li{
+    border: 2px solid white;
+}
+.pedido input{
+    width: 30vw;
+    background: transparent;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #b30fc9;
 }
 
 @property --angle {
