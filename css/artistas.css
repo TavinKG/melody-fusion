@@ -26,7 +26,6 @@ main li{
     display: flex;
     width: 30%;
     height: 100%;
-    /* padding: 35px; */
     align-items: center;
     justify-content: center;
 }
