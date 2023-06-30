@@ -240,7 +240,7 @@ dialog{
     display: none;
     justify-content: center;
     align-items: center;
-    width: 60vw;
+    width: 50vw;
     height: 50vh;
     margin-top: 15vh;
     padding: 30px 50px;
@@ -251,25 +251,54 @@ dialog{
 .pedido ul{
     display: flex;
     flex-direction: column;
-    text-align: center;
-    gap: 3vh ;
+    gap: 2vh ;
     width: 50vw;
+    align-items: center;
 }
 .pedido h1{
+    width: 40vw;
     margin-bottom: 15px;
     text-transform: uppercase;
+    text-align: center;
 }
 .pedido li{
-    border: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+}
+.pedido label{
+    width: 20vw;
+    color: #b30fc9;
+}
+.modo-escuro .pedido label{
+    color: #800080;
 }
 .pedido input{
-    width: 30vw;
+    width: 20vw;
     background: transparent;
     border: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    text-align: center;
-    color: #b30fc9;
+    text-align: left;
+    color: #1b0f22;
+}
+.modo-escuro .pedido input{
+    color: white;
+}
+.pedido #ddd-pedido{
+    width: 2vw;
+    text-align: left;
+}
+.pedido #tel-pedido{
+    width: 18vw;
+    text-align: left;
+}
+.pedido .compra-pedido input{
+    margin-top: 15px;
+    font-size: 125%;
+}
+.pedido #quant-pedido{
+    text-align: left;
 }
 
 @property --angle {
@@ -340,6 +369,33 @@ dialog{
     .pista button{
         font-size: 14px;
     }
+    .pedido{
+        width: 70vw;
+    }
+    .pedido li{
+        width: 60vw;
+    }
+    .pedido h1{
+        width: 60vw;
+        font-size: 24px;
+    }
+    .pedido label{
+        width: 30vw;
+        font-size: 14px;
+    }
+    .pedido input{
+        width: 30vw;
+        font-size: 12px;
+    }
+    .pedido #ddd-pedido{
+        width: 3vw;
+    }
+    .pedido #tel-pedido{
+        width: 27vw;
+    }
+    .pedido .compra-pedido input{
+        font-size: 16px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
@@ -388,4 +444,23 @@ dialog{
         font-size: 15px;
         font-weight: 500;
     }
+    .pedido{
+        width: 70vw;
+    }
+    .pedido li{
+        width: 60vw;
+    }
+    .pedido h1{
+        width: 60vw;
+    }
+    .pedido label{
+        width: 30vw;
+    }
+    .pedido input{
+        width: 30vw;
+    }
+    .pedido #tel-pedido{
+        width: 28vw;
+    }
+
 }
