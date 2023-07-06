@@ -20,6 +20,10 @@ var nome = document.querySelector("#name")
 var email = document.querySelector("#email")
 var endereco = document.querySelector("#endereco")
 var ddd = document.querySelector("#ddd")
+const modalSelecione = document.querySelector(".selecione")
+const modalPreencha = document.querySelector(".preencha")
+const btnOk = document.querySelector(".btn-ok")
+const btnOk2 = document.querySelector(".btn-ok2")
 
 let quant;
 let total = 0;
@@ -58,7 +62,7 @@ btnCancelar.addEventListener('click', () => {
 
 btnComprar.addEventListener('click', () => {
     if(nome.value === '' || email.value === '' || ddd.value === '' || tel.value === '' || endereco.value === '' || cpf.value === '') {
-        alert("Preencha todos os campos")
+        modalPreencha.showModal()
     }
     else {
         Modal.close()
@@ -75,6 +79,13 @@ btnComprar.addEventListener('click', () => {
     }
 })
 
+btnOk.addEventListener('click', () => {
+    modalSelecione.close()
+})
+
+btnOk2.addEventListener('click', () => {
+    modalPreencha.close()
+})
 
 
 function FunDiminui(par_id) {
@@ -119,7 +130,7 @@ function FunAumenta(par_id) {
 
 function FunModal() {
     if(total === 0){
-        alert("É necessário comprar pelo menos um ingresso para continuar")
+        modalSelecione.showModal()
     }
     else{
         Modal.showModal()

@@ -301,6 +301,16 @@ dialog{
 .pedido #quant-pedido{
     text-align: left;
 }
+.modal-alert{
+    width: 50vw;
+    height: 31vh;
+    text-align: center;
+    margin: 30vh 25vw;
+}
+.modal-alert p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 
 @property --angle {
     syntax: '<angle>';
@@ -439,6 +449,17 @@ dialog{
     }
     .pedido .compra-pedido input{
         font-size: 16px;
+    }
+    .modal-alert{
+        width: 80vw;
+        height: 35vh;
+        text-align: center;
+        margin: 30vh 10vw;
+    }
+    .modal-alert p{
+        font-size: 14px;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 }
 
