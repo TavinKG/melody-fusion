@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="shortcut icon" href="imagens/white.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Melody Fusion</title>
 </head>
 <body>
@@ -26,6 +28,36 @@
             <li id="botao-alterar-tema"><img src="imagens/ensolarado.png" alt="Sol" class="imagem-botao"></li>
         </ul>
     </header>
+    <main>
+        <div class="player">
+            <div class="wrapper">
+                <div class="details">
+                    <div class="now-playing">PLAYING x OF y</div>
+                    <div class="track-art"></div>
+                    <div class="track-name">Track Name</div>
+                    <div class="track-artist">Track Artist</div>
+                </div>
+
+                <div class="slider_container">
+                    <div class="current-time">00:00</div>
+                    <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                    <div class="total-duration">00:00</div>
+                </div>
+
+                <div class="slider_container">
+                    <i class="fa fa-volume-down"></i>
+                    <input type="range" min="1" max="100" class="volume_slider" onchange="setVolume()">
+                    <i class="fa fa-volume-up"></i>
+                </div>
+
+                <div class="buttons">
+                    <div class="random-track">
+                        <i class="fas fa-random fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer>
         <div class="description">
             <h3>Mais sobre a empresa</h3>
