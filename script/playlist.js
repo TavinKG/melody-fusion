@@ -184,6 +184,27 @@ function pauseTrack(){
     wave.classList.remove('loader');
     btnPlaypause.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
 }
+function nextTrack(){
+    if(trackIndex < 13 && isRandom === false){
+        trackIndex += 1;
+    } else if(trackIndex < musicList.lenght - 1 && isRandom === true){
+        let randomIndex = Number.parseInt(Math.random() * musicList.lenght);
+        trackIndex = randomIndex;
+    } else{
+        trackIndex = 0;
+    }
+    loadTrack(trackIndex);
+    playTrack();
+}
+function prevTrack(){
+    if(trackIndex > 0){
+        trackIndex -= 1;
+    }else {
+        trackIndex = musicList.length -1;
+    }
+    loadTrack(trackIndex);
+    playTrack();
+}
 
 
 
