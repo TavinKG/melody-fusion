@@ -16,43 +16,37 @@ else {
 
 if(modoClaro === false){
     body.classList.toggle("modo-escuro");
-    imagemBotaoTrocaDeTema.setAttribute("src", "imagens/lua-crescente.png");
-    imagemLogoHeader.setAttribute("src", "imagens/logo2-dark-rbg.png");
-    imagemBotaoTrocaDeTemaMobile.setAttribute("src", "imagens/lua-crescente.png");
-    imagemLogoHeader.setAttribute("src", "imagens/logo2-dark-rbg.png");
+    ativarModoEscuro();
 }
 
 botaoAlterarTema.addEventListener("click", () => {
-    const modoEscuroAtivo = body.classList.contains("modo-escuro");
-    body.classList.toggle("modo-escuro");
-    modoClaro = !modoClaro;
-    sessionStorage.setItem("modo", modoClaro);
-    if (modoEscuroAtivo) {
-    imagemBotaoTrocaDeTema.setAttribute("src", "imagens/ensolarado.png");
-    imagemBotaoTrocaDeTemaMobile.setAttribute("src", "imagens/ensolarado-white.png");
-    imagemLogoHeader.setAttribute("src", "imagens/logo2-white-rbg.png");
-  } else {
-    imagemBotaoTrocaDeTema.setAttribute("src", "imagens/lua-crescente.png");
-    imagemBotaoTrocaDeTemaMobile.setAttribute("src", "imagens/lua-crescente.png");
-    imagemLogoHeader.setAttribute("src", "imagens/logo2-dark-rbg.png");
-  }
+    trocarTema();
+});
+botaoAlterarTemaMobile.addEventListener("click", () => {
+  trocarTema();
 });
 
-botaoAlterarTemaMobile.addEventListener("click", () => {
+function trocarTema() {
   const modoEscuroAtivo = body.classList.contains("modo-escuro");
   body.classList.toggle("modo-escuro");
   modoClaro = !modoClaro;
   sessionStorage.setItem("modo", modoClaro);
   if (modoEscuroAtivo) {
+    ativarModoClaro();
+  } else {
+    ativarModoEscuro();
+  }
+}
+
+function ativarModoEscuro() {
+  imagemBotaoTrocaDeTema.setAttribute("src", "imagens/lua-crescente.png");
+  imagemLogoHeader.setAttribute("src", "imagens/logo2-dark-rbg.png");
+  imagemBotaoTrocaDeTemaMobile.setAttribute("src", "imagens/lua-crescente.png");
+}
+
+function ativarModoClaro() {
   imagemBotaoTrocaDeTema.setAttribute("src", "imagens/ensolarado.png");
   imagemBotaoTrocaDeTemaMobile.setAttribute("src", "imagens/ensolarado-white.png");
   imagemLogoHeader.setAttribute("src", "imagens/logo2-white-rbg.png");
-} else {
-  imagemBotaoTrocaDeTema.setAttribute("src", "imagens/lua-crescente.png");
-  imagemBotaoTrocaDeTemaMobile.setAttribute("src", "imagens/lua-crescente.png");
-  imagemLogoHeader.setAttribute("src", "imagens/logo2-dark-rbg.png");
 }
-});
-
-
 
