@@ -1,8 +1,7 @@
-const botaoAlterarTema = document.getElementById("botao-alterar-tema");
+const arrayBotaoAlterarTema = document.querySelectorAll(".botao-alterar-tema");
 const body = document.querySelector("body");
 const imagemBotaoTrocaDeTema = document.querySelector(".imagem-botao");
 const imagemLogoHeader = document.querySelector(".logo-header");
-const botaoAlterarTemaMobile = document.getElementById("botao-alterar-tema-mobile");
 const imagemBotaoTrocaDeTemaMobile = document.querySelector(".imagem-botao-mobile");
 var modoClaro;
 
@@ -19,12 +18,11 @@ if(modoClaro === false){
     ativarModoEscuro();
 }
 
-botaoAlterarTema.addEventListener("click", () => {
+arrayBotaoAlterarTema.forEach((botaoAlterarTema) => {
+  botaoAlterarTema.addEventListener("click", () => {
     trocarTema();
-});
-botaoAlterarTemaMobile.addEventListener("click", () => {
-  trocarTema();
-});
+  })
+})
 
 function trocarTema() {
   const modoEscuroAtivo = body.classList.contains("modo-escuro");
