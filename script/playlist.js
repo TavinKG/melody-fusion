@@ -22,8 +22,45 @@ let updateTimer;
 
 const musicList = [
     {
-        
+        img : 'capa-music/blindinglights.jpg',
+        name : 'Blinding Lights',
+        artist : 'The Weeknd',
+        music : 'music/blindinglights.mp3'
+    },
+    {
+        img : 'capa-music/happierthanever.jpg',
+        name : 'Happier Than Ever',
+        artist : 'Billie Eilish',
+        music : 'music/happierthanever.mp3'
+    },
+    {
+        img : 'capa-music/sunflower.jpg',
+        name : 'Sunflower',
+        artist : 'Post Malone',
+        music : 'music/sunflower.mp3'
     }
 ]
+
+loadTrack(trackIndex);
+
+function loadTrack(trackIndex){
+    clearInterval(updateTimer);
+    reset();
+
+    currTrack.src = musicList[trackIndex].music;
+    currTrack.load();
+
+    trackArt.style.backgroundImage = "url(" + musicList[trackIndex].img + ")";
+    trackName.textContent = musicList[trackIndex].name;
+    trackArtist.textContent = musicList[trackIndex].artist;
+    nowPlaying.textContent = "Playing music " + (trackIndex + 1) + " of " + musicList.length;
+
+    updateTimer = setInterval(setUpdate, 1000);
+
+    currTrack.addEventListener('ended', nextTrack);
+    random_bg_color();
+}
+
+
 
 
