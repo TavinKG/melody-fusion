@@ -22,8 +22,7 @@ var endereco = document.querySelector("#endereco")
 var ddd = document.querySelector("#ddd")
 const modalSelecione = document.querySelector(".selecione")
 const modalPreencha = document.querySelector(".preencha")
-const btnOk = document.querySelector(".btn-ok")
-const btnOk2 = document.querySelector(".btn-ok2")
+const arrayBtnOk = document.querySelectorAll(".btn-ok")
 
 let quant;
 let total = 0;
@@ -80,14 +79,12 @@ btnComprar.addEventListener('click', () => {
     }
 })
 
-btnOk.addEventListener('click', () => {
-    modalSelecione.close()
+arrayBtnOk.forEach((btnOk) => {
+    btnOk.addEventListener('click', () => {
+        modalSelecione.close()
+        modalPreencha.close()
+    })
 })
-
-btnOk2.addEventListener('click', () => {
-    modalPreencha.close()
-})
-
 
 function FunDiminui(par_id) {
     if(par_id == "-button1" && Input1.value > 0){
@@ -135,7 +132,7 @@ function FunModal() {
     }
     else{
         Modal.showModal()
-    valorTotalModal.setAttribute('value', ValorTotal.value)
+        valorTotalModal.setAttribute('value', ValorTotal.value)
     if(total === 1) {
         quantModal.setAttribute('value', InputTotal.value + "x Ingresso")
     }

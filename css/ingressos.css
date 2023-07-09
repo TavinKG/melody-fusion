@@ -311,6 +311,9 @@ dialog{
     margin-top: 15px;
     margin-bottom: 15px;
 }
+.modo-escuro .modal-alert p{
+    color: white;
+}
 
 @property --angle {
     syntax: '<angle>';
