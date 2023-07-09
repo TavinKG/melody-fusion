@@ -76,6 +76,7 @@ btnComprar.addEventListener('click', () => {
         document.querySelector("#cpf-pedido").setAttribute('value', cpf.value)
         document.querySelector("#valor-total-pedido").setAttribute('value', valorTotalModal.value)
         document.querySelector("#quant-pedido").setAttribute('value', quantModal.value)
+        window.scrollTo({top: 0, behavior: 'smooth'})
     }
 })
 
