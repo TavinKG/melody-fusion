@@ -38,6 +38,72 @@ const musicList = [
         name : 'Sunflower',
         artist : 'Post Malone',
         music : 'music/sunflower.mp3'
+    },
+    {
+        img : 'capa-music/7rings.jpg',
+        name : '7 Rings',
+        artist : 'Ariana Grande',
+        music : 'music/7rings.mp3'
+    },
+    {
+        img : 'capa-music/shapeofyou.jpg',
+        name : 'Shape of You',
+        artist : 'Ed Sheeran',
+        music : 'music/shapeofyou.mp3'
+    },
+    {
+        img : 'capa-music/shakeitoff.jpg',
+        name : 'Shake It Off',
+        artist : 'Taylor Swift',
+        music : 'music/shakeitoff.mp3'
+    },
+    {
+        img : 'capa-music/thatswhatilike.jpg',
+        name : 'That´s What I Like',
+        artist : 'Bruno Mars',
+        music : 'music/thatswhatilike.mp3'
+    },
+    {
+        img : 'capa-music/diamonds.jpg',
+        name : 'Diamonds',
+        artist : 'Rihanna',
+        music : 'music/diamonds.mp3'
+    },
+    {
+        img : 'capa-music/hearmenow.jpg',
+        name : 'Hear me Now',
+        artist : 'Alok',
+        music : 'music/hearmenow.mp3'
+    },
+    {
+        img : 'capa-music/pokerface.jpg',
+        name : 'Poker Face',
+        artist : 'Lady Gaga',
+        music : 'music/pokerface.mp3'
+    },
+    {
+        img : 'capa-music/goosebumps.jpg',
+        name : 'Goosebumps',
+        artist : 'Travis Scott',
+        music : 'music/goosebumps.mp3'
+    },
+    {
+        img : 'capa-music/halo.jpg',
+        name : 'Halo',
+        artist : 'Beyoncé',
+        music : 'music/halo.mp3'
+    },
+    {
+        img : 'capa-music/paradise.jpg',
+        name : 'Paradise',
+        artist : 'Coldplay',
+        music : 'music/paradise.mp3'
+    },
+    {
+        img : 'capa-music/hello.jpg',
+        name : 'Hello',
+        artist : 'Adele',
+        music : 'music/hello.mp3'
     }
 ]
 
