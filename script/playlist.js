@@ -80,7 +80,27 @@ function random_bg_color(){
     let gradient = 'linear-gradient(' + angle + ',' + Color1 + ', ' + Color2 + ")";
     document.body.style.background = gradient; 
 }
-
+function reset(){
+    currTime.textContent = "00:00";
+    totalDuration.textContent = "00:00";
+    seekSlider.value = 0;
+}
+function randomTrack(){
+    isRandom ? pauseRandom() : playRandom();
+}
+function playRandom(){
+    isRandom = true;
+    randomIcon.classList.add('randomActive');
+}
+function pauseRandom(){
+    isRandom = false;
+    randomIcon.classList.remove('randomActive');
+}
+function repeatTrack(){
+    let currIndex = trackIndex;
+    loadTrack(currIndex);
+    playTrack();
+}
 
 
 
