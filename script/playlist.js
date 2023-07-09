@@ -187,8 +187,8 @@ function pauseTrack(){
 function nextTrack(){
     if(trackIndex < 13 && isRandom === false){
         trackIndex += 1;
-    } else if(trackIndex < musicList.lenght - 1 && isRandom === true){
-        let randomIndex = Number.parseInt(Math.random() * musicList.lenght);
+    } else if(trackIndex < 13 && isRandom === true){
+        let randomIndex = parseInt(Math.random() * musicList.lenght);
         trackIndex = randomIndex;
     } else{
         trackIndex = 0;
@@ -204,6 +204,33 @@ function prevTrack(){
     }
     loadTrack(trackIndex);
     playTrack();
+}
+function seekTo(){
+    let seekto = currTrack.duration + (seekSlider.value / 100);
+    currTrack.currentTime = seekto;
+}
+function setVolume(){
+    currTrack.volume = volumeSlider.value / 100;
+}
+function setUpdate(){
+    let seekPosition = 0;
+    if(!isNaN(currTrack.duration)){
+        seekPosition = currTrack.currentTime * (100 / currTrack.duration);
+        seekSlider.value = seekPosition;
+
+        let currentMinutes = Math.floor(currTrack.currentTime / 60);
+        let currSeconds = Math.floor(currTrack.currentTime - currentMinutes * 60);
+        let durationMinutes = Math.floor(currTrack.duration / 60);
+        let durationSeconds = Math.floor(currTrack.duration - durationMinutes * 60);
+
+        if(currSeconds < 10) {currSeconds = "0" + currSeconds; }
+        if(durationSeconds < 10) {durationSeconds = "0" + durationSeconds; }
+        if(currentMinutes < 10) {currentMinutes = "0" + currentMinutes; }
+        if(durationMinutes < 10) {durationMinutes = "0" + durationMinutes; }
+
+        currTime.textContent = currentMinutes + ":" + currSeconds;
+        totalDuration.textContent = durationMinutes + ":" + durationSeconds;
+    }
 }
 
 
