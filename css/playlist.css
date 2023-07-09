@@ -144,7 +144,7 @@ i.fa-step-backward{
     height: 150%;
     width: 10px;
     border-radius: 50px;
-    margin: 0px 50px;
+    margin: 0px 5px;
     animation: animate 1.4s linear infinite;
 }
 @keyframes animate{

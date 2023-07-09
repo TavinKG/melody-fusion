@@ -3,7 +3,7 @@ let trackArt = document.querySelector('.track-art');
 let trackName = document.querySelector('.track-name');
 let trackArtist = document.querySelector('.track-artist');
 
-let btnPlaypause = document.querySelector('.playpause-track');
+let btnPlaypause = document.querySelector('.playpausetrack');
 let btnNext = document.querySelector('.next-track');
 let btnPrev = document.querySelector('.prev-track');
 
@@ -167,7 +167,23 @@ function repeatTrack(){
     loadTrack(currIndex);
     playTrack();
 }
-
+function playpauseTrack(){
+    isPlaying ? pauseTrack() : playTrack();
+}
+function playTrack(){
+    currTrack.play();
+    isPlaying = true;
+    trackArt.classList.add('rotate');
+    wave.classList.add('loader');
+    btnPlaypause.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+}
+function pauseTrack(){
+    currTrack.pause();
+    isPlaying = false;
+    trackArt.classList.remove('rotate');
+    wave.classList.remove('loader');
+    btnPlaypause.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+}
 
 
 
