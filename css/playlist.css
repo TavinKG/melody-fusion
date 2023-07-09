@@ -186,3 +186,53 @@ i.fa-step-backward{
 .stroke:nth-child(7){
     animation-delay: 0s;
 }
+
+@media screen and (max-width: 767px){
+    main{
+        margin: 0;
+        height: 84vh;
+        padding-bottom: calc(15vh + 2px);
+    }
+    .player{
+        margin-top: 10vh;
+        height: 539px;
+    }
+    .wrapper{
+        padding: 20px;
+    }
+    .track-art{
+        width: 200px;
+        height: 200px;
+    }
+    .track-name{
+        font-size: 2rem;
+    }
+    .seek_slider{
+        width: 50%;
+    }
+    .volume_slider{
+        width: 20%;
+    }
+    .buttons{
+        margin: 0px 0px 0px;
+    }
+    .repeat-track,
+    .random-track,
+    .playpause-track,
+    .prev-track,
+    .next-track{
+        padding: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    main{
+        margin: 0;
+        height: 84vh;
+        padding-bottom: calc(15vh + 2px);
+    }
+    .player{
+        margin-top: 10vh;
+        height: 539px;
+    }
+}
