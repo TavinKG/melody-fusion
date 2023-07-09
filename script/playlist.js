@@ -232,6 +232,3 @@ function setUpdate(){
         totalDuration.textContent = durationMinutes + ":" + durationSeconds;
     }
 }
-
-
-

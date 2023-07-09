@@ -1,3 +1,12 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh 0;
+}
+body{
+    color: white;
+}
 .player{
     height: 95vh;
     display: flex;
