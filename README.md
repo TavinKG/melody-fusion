@@ -13,7 +13,8 @@
 
 
 <h1 align="center">Introdução</h1>
-<p align="center">Projeto desenvolvido para obtenção de nota semestral da matéria de Front-End da faculdade. O site desenvolvido é apenas uma simulação de um evento musical, não possuindo qualquer relação com o mundo físico.</p>
+<p>Projeto desenvolvido para obtenção de nota semestral da matéria de Front-End da faculdade. O site desenvolvido é apenas uma simulação de um evento musical, não possuindo qualquer relação com o mundo físico.</p>
+<p>O site tem o objetivo de práticar conceitos de Front-End e nele é possível verificar os horários que cada artista se apresentaria, uma aba com a descrição de cada artista, um player com a principal música de cada um e uma última aba para realizar um pedido de ingressos. Além disso, o site possui opção de tema escuro e claro, contribuindo com a experiência do usuário.</p>
 
 ### 🛠 Tecnologias
 
