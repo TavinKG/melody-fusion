@@ -14,7 +14,7 @@
 
 <h1 align="center">Introdução</h1>
 <p>Projeto desenvolvido para obtenção de nota semestral da matéria de Front-End da faculdade. O site desenvolvido é apenas uma simulação de um evento musical, não possuindo qualquer relação com o mundo físico.</p>
-<p>O site tem o objetivo de práticar conceitos de Front-End e nele é possível verificar os horários que cada artista se apresentaria, uma aba com a descrição de cada artista, um player com a principal música de cada um e uma última aba para realizar um pedido de ingressos. Além disso, o site possui opção de tema escuro e claro, contribuindo com a experiência do usuário.</p>
+<p>O site tem o objetivo de práticar conceitos de Front-End e criar uma experiência fictícia de um festival de música, possibilitando ao usuário acessar informações sobre o evento e realizar pedido de ingressos.</p>
 
 ### 🛠 Tecnologias
 
@@ -22,3 +22,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Javascript](<[https://expo.io/](https://developer.mozilla.org/en-US/docs/Web/JavaScript)>)
 - [VS Code](<[https://nodejs.org/en/](https://code.visualstudio.com/)>)
+
+<h1 align="center">Funcionalidades do Projeto</h1>
+
+- `Line Up`: Tabela interativa com os horários e palcos em que cada artista se apresentaria;
+- `Descrição dos artistas`: Aba com uma breve descrição sobre os artistas que irão se apresentar;
+- `Player de música`: Um player de música com a principal música de cada artista;
+- `Pedido de ingressos`: funcionalidade principal, onde o usuário pode selecionar os ingressos que desejar, preencher seus dados e então será gerado seu pedido.
