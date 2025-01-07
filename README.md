@@ -8,6 +8,8 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/TavinKG/melody-fusion?style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/TavinKG/melody-fusion?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/TavinKG/melody-fusion?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/STATUS-FINALIZADO-blue?style=for-the-badge)
+
 
 
 <h1 align="center">Introdução</h1>
