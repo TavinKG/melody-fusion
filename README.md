@@ -20,8 +20,8 @@
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [Javascript](<[https://expo.io/](https://developer.mozilla.org/en-US/docs/Web/JavaScript)>)
-- [VS Code](<[https://nodejs.org/en/](https://code.visualstudio.com/)>)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [VS Code](https://code.visualstudio.com/)
 
 <h1 align="center">Funcionalidades do Projeto</h1>
 
